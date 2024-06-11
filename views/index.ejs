@@ -1,0 +1,17 @@
+<!-- include header here -->
+<%- include("partials/header.ejs") %>
+
+    <%if(locals.Radj && locals.Rnoun){%>
+        
+        <h1><%= Radj %> <%= Rnoun %></h1>
+    <%}else{%>
+        <h1>Welcome to the random name generator🤘</h1>
+
+    <%}%>
+
+    <form action="/generate" method="post">
+        <input type="submit" value="Generate Name">
+    </form>
+
+<!-- include footer here -->
+ <%- include("partials/footer.ejs") %>
